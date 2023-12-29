@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Peido</title>
+</head>
+<body>
+    <style>
+        body {
+    background: #cb4343;
+}
+
+.container{
+    max-width: 600px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #525050;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+border: none;
+border-radius: 8px;
+padding: 10px 18px;
+cursor: pointer;
+}
+
+#yes:hover{
+background-color: #82df83;
+}
+
+#yes{
+   margin-left: -50px;
+   margin-right: 50px;
+}
+
+#no{
+  
+    position: absolute;
+}
+
+#no:hover{
+    background-color: #ff0000;
+}
+    </style>
+    <div class="container">
+        <h1>Quer casar comigo?</h1>
+       <a href="https://youtu.be/Uj89ZUS7UO4?si=10KRuXvRC0CLmPQN" target="_blank"> <button id="yes">Sim!</button></a>
+       <button onmouseover="fuja()" id="no">Não</button><br>
+        <img src="https://gifs.eco.br/wp-content/uploads/2022/09/gifs-de-urso-abracando-6.gif" alt="urso">
+    </div>
+
+    <script>
+        function fuja(){
+            var buttonNo = document.getElementById('no')
+
+            var larguraJanela = window.innerWidth
+            var altura = window.innerHeight
+
+            var maxX = larguraJanela - buttonNo.offsetWidth
+            var maxY = altura - buttonNo.offsetHeight
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            buttonNo.style.left = aleatorioX + "px"
+            
+            buttonNo.style.top = aleatorioY + "px"
+
+        }
+    </script>
+</body>
+
+</html>
